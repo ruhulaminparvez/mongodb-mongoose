@@ -109,7 +109,7 @@ const removeManyPeople = (done) => {
 
   Person.deleteMany({ name: nameToRemove }, (err, data) => {
     if (err) return done(err);
-    done(null, data);
+    done(null, data); // Pass the outcome of the operation
   });
 };
 
