@@ -20,12 +20,12 @@ const Person = mongoose.model('Person', personSchema);
 const createAndSavePerson = (done) => {
   const newPerson = new Person({
     name: 'John Doe',
-    age: 25,
+    age: 30,
     favoriteFoods: ['Pizza', 'Burger']
   });
 
   newPerson.save((err, data) => {
-    if (err) return done(err); // Handle error
+    if (err) return done(err);
     done(null, data); // Pass the saved document to the callback
   });
 };
