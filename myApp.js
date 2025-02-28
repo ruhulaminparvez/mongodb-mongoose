@@ -32,9 +32,9 @@ const createAndSavePerson = (done) => {
 
 // Create Many People
 const createManyPeople = (arrayOfPeople, done) => {
-  Person.insertMany(arrayOfPeople, (err, data) => {
+  Person.create(arrayOfPeople, (err, data) => {
     if (err) return done(err);
-    done(null, data);
+    done(null, data); // Pass the saved documents to the callback
   });
 };
 
